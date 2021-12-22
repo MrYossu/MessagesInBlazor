@@ -1,0 +1,6 @@
+﻿@using Messages.Models
+<ul>
+  @foreach (Widget w in Widgets) {
+    <li>&quot;@w.Name&quot; created at @w.Date.ToLongTimeString()</li>
+  }
+</ul>
