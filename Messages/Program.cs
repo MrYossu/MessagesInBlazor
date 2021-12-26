@@ -4,7 +4,6 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-// Change the next line to AddSingleton to simulate SignalR
 builder.Services.AddScoped<SoupDragon>();
 
 WebApplication app = builder.Build();

@@ -10,10 +10,15 @@ namespace Messages.Shared {
 
     private ObservableCollection<Widget> Widgets { get; } = new() { new Widget { Name = "Initial" } };
 
-    protected override void OnInitialized() =>
+    protected override void OnInitialized() {
       SoupDragon.NewWidget += async w => {
         Widgets.Add(w);
         await InvokeAsync(StateHasChanged);
       };
+      StaticChicken.NewWidget += async w => {
+        Widgets.Add(w);
+        await InvokeAsync(StateHasChanged);
+      };
+    }
   }
 }

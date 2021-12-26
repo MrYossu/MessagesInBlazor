@@ -1,6 +1,8 @@
 ﻿@using Messages.Models
-<ul>
-  @foreach (Widget w in Widgets) {
-    <li>&quot;@w.Name&quot; created at @w.Date.ToLongTimeString()</li>
-  }
-</ul>
+<div class="border border-success p-3">
+  <ul>
+    @foreach (Widget w in Widgets) {
+      <li>&quot;@w.Name&quot; created at @w.Date.ToLongTimeString()</li>
+    }
+  </ul>
+</div>

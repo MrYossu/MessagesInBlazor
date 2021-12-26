@@ -4,6 +4,14 @@
 
 <h1>Messages in Blazor</h1>
 
+<p>This sample is the result of me trying to <a href="https://www.pixata.co.uk/2021/12/22/mvvm-style-messaging-in-blazor/" target="_blank">implement an MVVM-style messaging system in server-side Blazor</a>. Please read that blog post for more details.</p>
+
+<p>There are two independent components on this page, the NewWidget component (with a blue border) which is where you can add new widgets. Below that (with a green border) is the WidgetList component, that displays the widgets. The two components know nothing about each other, and could be anywhere in the UI tree, not necessarily direct children of the same parent.</p>
+
+<p>The two buttons in NewWidget demonstrate the usage of the two approaches to sending out messages. The rather childishly named SoupDragon is injected as scoped service, so only components in the same scope will pick up the messages it sends. The equally childishly named StaticChicken is a static class, and so messages it sends will be picked up by all components. This enables messages to be sent out to all clients, rather like SignalR does.</p>
+
+<p>To see this in action, open this page in two browser windows (or tabs actually). Any widgets you create when clicking the soup dragon button will only be shown in that window, whereas widgets created with the static chicken button will show in both windows.</p>
+
 <NewWidget />
-<hr/>
+
 <WidgetList />

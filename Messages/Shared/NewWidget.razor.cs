@@ -9,8 +9,13 @@ namespace Messages.Shared {
 
     private Widget _widget = new();
 
-    private void AddNewWidget() {
+    private void AddNewWidgetSoupDragon() {
       SoupDragon.RaiseNewWidget(_widget);
+      _widget = new();
+    }
+
+    private void AddNewWidgetStaticChicken() {
+      StaticChicken.RaiseNewWidget(_widget);
       _widget = new();
     }
   }
